@@ -436,7 +436,7 @@ function profit(crop) {
                 var caskModifier = getCaskModifier();
                 var dehydratorModifier = getDehydratorModifier(crop);
                 if (options.produce == 1) {
-                    netIncome += itemsMade * (crop.produce.jar != null ? crop.produce.jar : options.skills.arti ? (crop.produce.price * 2 + 50) * 1.4 : crop.produce.price * 2 + 50);
+                    netIncome += itemsMade * (crop.produce.jarType != null ? options.skills.arti ? (crop.produce.price * 2 + 50) * 1.4 : crop.produce.price * 2 + 50 : 0);
                 }
                 else if (options.produce == 2) {
                     netIncome += itemsMade * (crop.produce.keg != null ? crop.produce.keg * caskModifier : Math.floor(crop.produce.price * kegModifier) * caskModifier);
