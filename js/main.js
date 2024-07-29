@@ -1127,7 +1127,7 @@ function renderGraph() {
 					tooltipTr = tooltipTable.append("tr");
 					if (d.produce.jarType) {
 						tooltipTr.append("td").attr("class", "tooltipTdLeftSpace").text("Value (" + d.produce.jarType + "):");
-						var jarPrice = options.skills.arti ? (crop.produce.price * 2 + 50) * 1.4 : crop.produce.price * 2 + 50;
+						var jarPrice = options.skills.arti ? (d.produce.price * 2 + 50) * 1.4 : d.produce.price * 2 + 50;
 						tooltipTr.append("td").attr("class", "tooltipTdRight").text(jarPrice)
 						.append("div").attr("class", "gold");
 					}
